@@ -31,8 +31,6 @@ int main() {
                    }
     }
     printf("\n");
-    return 0;
-}
     // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
     // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
     // Sugestão: Posicione quatro navios no tabuleiro, incluindo dois na diagonal.
