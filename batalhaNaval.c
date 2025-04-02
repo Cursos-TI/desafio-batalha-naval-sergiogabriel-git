@@ -11,24 +11,34 @@ int main() {
     // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
     // navios
 
-    short navioA[3] = {1,2,3};
-    short navioB[3] = {6,7,8};
+    /* código de tabela batalha naval 
+    * utilizando o conceito de matriz e
+    * loops aninhados */
 
-    // colunas
-    for(char coluna = 'A'; coluna < 'K'; ++coluna) {
-	    printf("  %c", coluna);
-    }
-
-    // linhas
-    for(short linha = 0; linha < 10; ++linha) {
-	    printf("\n%d", linha);
-	    if(linha >= navioA[0] && linha <= navioA[2])
-		    	printf(" %d ", 3);
-	    for(short mar = 0; mar < 10; ++mar) {
-		    printf(" %d ", 0);
-	            if(linha >= navioB[0] && linha <= navioB[2])
-			    printf(" %d ", 3);
-                   }
+    // matriz batalha naval
+    int matriz[10][10] = {
+        {0,0,0,0,0,0,0,0,0,0},
+        {1,0,0,3,3,3,0,0,0,0},
+        {2,0,0,0,0,0,0,0,0,0},
+        {3,0,0,0,0,0,0,0,0,0},
+        {4,0,0,0,0,0,0,0,0,0},
+        {5,0,0,3,0,0,0,0,0,0},
+        {6,0,0,3,0,0,0,0,0,0},
+        {7,0,0,3,0,0,0,0,0,0},
+        {8,0,0,0,0,0,0,0,0,0},
+        {9,0,0,0,0,0,0,0,0,0}};
+    
+    // loop colunas de cabeçalho
+    for(char coluna = 'A'; coluna < 'J'; ++coluna)
+        printf("  %c", coluna);
+        
+    //loop alinhador
+    for(short i = 0; i < 10; ++i) {
+        printf("\n");
+        
+        // loop tabela
+        for(short j = 0; j < 10; ++j)
+        printf(" %d ", matriz[i][j]);
     }
     printf("\n");
     // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
