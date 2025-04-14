@@ -11,24 +11,38 @@ int main() {
     // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
     // navios
 
-    int tabuleiro[10][10] = {
-        {0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,3,3,3,0,0,0},
-        {0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,3,0,0},
-        {0,0,0,0,0,0,0,3,0,0},
-        {0,0,0,0,0,0,0,3,0,0},
-        {0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,0,0,0},
-    };
+    // Matriz bidimensional para representar o tabuleiro
+    int tabuleiro[10][10] = {0};
 
-    int cruzador[3] = {3,3,3};
-    int antitorpedo[3] = {3,3,3};
+    // Navio vertical (3 partes) na coluna 1, linhas 1 a 3
+    tabuleiro[1][1] = 1;
+    tabuleiro[2][1] = 1;
+    tabuleiro[3][1] = 1;
 
-    for(int i = 0, j = 0; i < 10, j < 10; ++i, ++j)
-        printf("%d", tabuleiro[i][j]);
+    // Navio horizontal (3 partes) na linha 4, colunas 2 a 4
+    tabuleiro[4][2] = 2;
+    tabuleiro[4][3] = 2;
+    tabuleiro[4][4] = 2;
+
+    // Coordenadas de navio na vertical
+    printf("Coordenadas do navio vertical:\n");
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            if (tabuleiro[i][j] == 1) {
+                printf("(%d, %d)\n", i, j);
+            }
+        }
+    }
+
+    // Coordenadas de navio na horizontal
+    printf("Coordenadas do navio horizontal:\n");
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            if (tabuleiro[i][j] == 2) {
+                printf("(%d, %d)\n", i, j);
+            }
+        }
+    }
 
     // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
     // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
