@@ -12,7 +12,7 @@ int main() {
     // navios
 
     // Matriz bidimensional para representar o tabuleiro
-    int tabuleiro[10][10] = {0};
+    int tabuleiro[5][5] = {0};
 
     // Navio vertical (3 partes) na coluna 1, linhas 1 a 3
     tabuleiro[1][1] = 1;
@@ -26,8 +26,8 @@ int main() {
 
     // Coordenadas de navio na vertical
     printf("Coordenadas do navio vertical:\n");
-    for (int i = 0; i < 10; i++) {
-        for (int j = 0; j < 10; j++) {
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
             if (tabuleiro[i][j] == 1) {
                 printf("(%d, %d)\n", i, j);
             }
@@ -36,8 +36,8 @@ int main() {
 
     // Coordenadas de navio na horizontal
     printf("Coordenadas do navio horizontal:\n");
-    for (int i = 0; i < 10; i++) {
-        for (int j = 0; j < 10; j++) {
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
             if (tabuleiro[i][j] == 2) {
                 printf("(%d, %d)\n", i, j);
             }
