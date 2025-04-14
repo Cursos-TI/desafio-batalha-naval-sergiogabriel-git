@@ -24,10 +24,10 @@ int main() {
         {0,0,0,0,0,0,0,0,0,0},
     };
 
-    short cruzador[3] = {3,3,3};
-    short antitorpedo[3] = {3,3,3};
+    int cruzador[3] = {3,3,3};
+    int antitorpedo[3] = {3,3,3};
 
-    for(short i = 0, j = 0; i < 10, j < 10; ++i, ++j)
+    for(int i = 0, j = 0; i < 10, j < 10; ++i, ++j)
         printf("%d", tabuleiro[i][j]);
 
     // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
