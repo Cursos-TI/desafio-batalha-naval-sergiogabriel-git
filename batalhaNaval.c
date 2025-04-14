@@ -38,7 +38,7 @@ int main() {
     /* código de tabela batalha naval 
     * utilizando o conceito de matriz e
     * loops aninhados */
-/*
+
     // matriz batalha naval
     int matriz[10][10] = {
         {0,0,0,0,0,0,0,0,0,0},
@@ -65,7 +65,7 @@ int main() {
         printf(" %d ", matriz[i][j]);
     }
     printf("\n");
-*/
+
     // Nível Mestre - Habilidades Especiais com Matrizes
     // Sugestão: Crie matrizes para representar habilidades especiais como cone, cruz, e octaedro.
     // Sugestão: Utilize estruturas de repetição aninhadas para preencher as áreas afetadas por essas habilidades no tabuleiro.
